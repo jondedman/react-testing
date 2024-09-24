@@ -21,7 +21,9 @@ git history:
 5. Install the necessary dependencies - run `npm install` in the folder where
    the package.json is located.
 
-The following can all be found under the "scripts" section in your
+## Scripts
+
+The following can all be found under the `"scripts"` section in your
 `package.json`. You can add more scripts here if you like, and run them with
 `npm run my-script`.
 
