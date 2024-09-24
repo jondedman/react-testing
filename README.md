@@ -14,13 +14,11 @@ This template uses:
 To create a fresh copy of this project, clone the repository, then remove it's
 git history:
 
-1. Clone this repo into a folder on your machine. eg.
-   `git clone git@github.com:makersacademy/react-template.git my-project-name`
+1. Fork and clone this repo into a folder on your machine.
 2. `cd` into that folder `cd my-project-name`
 3. Delete the git history: `rm -rf .git`
-4. Install dependencies `npm install`
-
-## Scripts
+4. Install the necessary dependencies - run `npm install` in the folder where
+   the package.json is located.
 
 The following can all be found under the "scripts" section in your
 `package.json`. You can add more scripts here if you like, and run them with
