@@ -11,23 +11,16 @@ This template uses:
 
 ## Installation
 
-To create a fresh copy of this project, you can use the tool `degit`:
-
-```zsh
-npx degit makersacademy/react-template my-project --mode=git
-
-cd my-project
-
-npm install
-```
-
-If for some reason `degit` doesn't work for you, you can instead follow these
-instructions:
+To create a fresh copy of this project, clone the repository, then remove it's
+git history:
 
 1. Clone this repo into a folder on your machine. eg.
    `git clone git@github.com:makersacademy/react-template.git my-project-name`
 2. `cd` into that folder `cd my-project-name`
 3. Delete the git history: `rm -rf .git`
+4. Install dependencies `npm install`
+
+## Scripts
 
 The following can all be found under the "scripts" section in your
 `package.json`. You can add more scripts here if you like, and run them with
