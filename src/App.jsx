@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Profile
-        firstName="Jon"
+        name="Jon"
         job="Junior Developer"
         birthdate="11/0976"
       />

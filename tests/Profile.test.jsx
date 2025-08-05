@@ -2,30 +2,19 @@ import { screen, render } from "@testing-library/react";
 
 import Profile from "../src/components/Profile";
 
-test("renders with the correct name", () => {
-  // Setup - rendering the component on the page
-  render(<Profile firstName="Jon" />);
+describe("Profile should contain a heading element with the correct text", () => {
+  it("Should render a h3 with the correct name", () => {
+    render(<Profile name="Jon" />);
+    const headingElement = screen.getByRole("heading");
+    expect(headingElement.tagName).toBe("H3");
+    expect(headingElement).toHaveTextContent("Jon");
+  });
 
-  // Assert
-  expect(screen.getByRole("heading")).toHaveTextContent("Jon");
+    it("Should render a 2 paragraph elements", () => {
+    render(<Profile name="Jon" job="Developer" birthdate="11/09/76" />);
+    const paragraph1 = screen.getByText("Developer");
+    const paragraph2 = screen.getByText("11/09/76");
+    expect(paragraph1.tagName).toBe("P");
+    expect(paragraph2.tagName).toBe("P")
 });
-
-test("renders with the correct job", () => {
-  // Setup - rendering the component on the page
-  render(<Profile firstName="Jon" job="Junior Developer"/>);
-
-  // Assert
-  expect(screen.getByText("Junior Developer")).toBeInTheDocument();
-  expect(screen.getByText("Junior Developer").tagName).toBe("P");
 });
-
-test("renders with the correct birthdate", () => {
-  // Setup - rendering the component on the page
-  render(<Profile firstName="Jon" job="Junior Developer" birthdate="11/09/76"/>);
-
-  // Assert
-  expect(screen.getByText("11/09/76")).toBeInTheDocument();
-  expect(screen.getByText("11/09/76").tagName).toBe("P");
-  
-});
-
