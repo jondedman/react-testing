@@ -1,12 +1,16 @@
 import Hello from "./components/Hello";
 import makersLogo from "./assets/Makers-Logo.png";
+import Profile from "./components/Profile";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Hello name="World" />
-      <img className="logo" src={makersLogo}></img>
+      <Profile
+        firstName="Jon"
+        job="Junior Developer"
+        birthdate="11/0976"
+      />
     </>
   );
 }
